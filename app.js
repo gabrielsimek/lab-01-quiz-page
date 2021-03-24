@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { isYes } from './utils.js';
+import { isYes, percentage} from './utils.js';
 // initialize state
 
 // set event listeners to update state and DOM
@@ -36,8 +36,18 @@ button.addEventListener('click', () => {
     }
 
     alert('Congrats you finished, the results will be displayed bellow');
+    let percentScored = percentage(score, 3);
+    results.textContent = `${userName}, your score is ${score} out of 3 your percent is ${percentScored}`;
 
-    results.textContent = `${userName}, your score is ${score} out of 3`;
+    if (score === 0){
+        results.style.backgroundColor = 'red';
+    } else if (score === 1) {
+        results.style.backgroundColor = 'orange';
+    } else if (score === 2) {
+        results.style.backgroundColor = 'yellow';
+    } else if (score === 3) {
+        results.style.backgroundColor = 'green';
+    }
 
 
     

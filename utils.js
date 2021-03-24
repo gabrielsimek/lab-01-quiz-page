@@ -6,3 +6,9 @@ export function isYes(userInput) {
         return false;
     }
 }
+
+export function percentage(number, of){
+    const percent = (number / of) * 100;
+    return Math.floor(percent) + '%';
+}
+

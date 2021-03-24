@@ -34,6 +34,11 @@ Alert the user that the quiz has been completed (alert)
 
 push the results of the quiz to the results section and use '${}'
 
+change contents and style of result based on user score
+    if score >= 0 style.backgroundcolor = red
+    if score >=
+    etc...
+    should be 
 
 
 
